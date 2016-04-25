@@ -1,0 +1,40 @@
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+h2 {
+  margin: 1em 0;
+}
+
+section.letter {
+  font-size: 20px;
+  font-family: "Dancing Script", cursiv;
+  color: #09093c;
+  background-color: #f8f0ce;
+  line-height: 32px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 1px 0px #000, 1px 1px 3px 0 #000;
+  /*transform: rotate(-1deg);*/
+}
+
+section.letter.print {
+  background-color: #fff;
+}
+
+input, textarea {
+  border: none;
+  border-bottom: solid 1px currentcolor;
+  font-family: "Dancing Script", cursiv;
+  font-size: 20px;
+  padding: 0 10px;
+  background-color: transparent;
+}
+
+input[type=number]{
+  width:3em;
+}
