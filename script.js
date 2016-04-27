@@ -91,7 +91,11 @@ new Vue({
       'handwerken',
       'schlafen',
       'töpfern',
-      'fischen'
+      'fischen',
+      'stehlen',
+      'handeln',
+      'verschiedene Sprachen sprechen',
+      'lehren'
     ],
     fame: [
       'ihre hervorragende Bratwurst',
@@ -102,7 +106,9 @@ new Vue({
       'nichts besonderes',
       'den feinsten Honig',
       'ihre drakonischen Gesetze',
-      'wunderschöne Landschaft'
+      'ihre wunderschöne Landschaft',
+      'die hübschesten Mädchen',
+      'das beste Bier weit und breit'
     ],
     disadvantages: [
       'Tollpatschigkeit',
@@ -122,7 +128,10 @@ new Vue({
       'Verfressenheit',
       'Jähzornigkeit',
       'Alberkeit',
-      'negative Weltansicht'
+      'negative Weltansicht',
+      'Neugier',
+      'Angstlichkeit',
+      'schwache Blase'
     ],
     secrets: [
       'ich ein Muttermal am Hintern habe',
@@ -154,6 +163,34 @@ new Vue({
       'der Spielkarte an meinem Hut',
       'meinem Musikinstrument',
       'meinem prächtigem Bart',
+      'meinem Herold der mir vorraus eilt',
+      'meiner prunkvollen Kleidung',
+      'meiner abgewetzten Kleidung',
+      'meiner wunderschönen Stimme',
+      'meiner einzigartigen Waffe'
+    ],
+    jobs: [
+      ['Alchemist', 'Alchemistin'],
+      ['Bäcker', 'Bäckerin'],
+      ['Bauer', 'Bäuerin'],
+      ['Bote', 'Botin' ],
+      ['Falkner', 'Falknerin'],
+      ['Gerber', 'Gerberin'],
+      ['Koch', 'Köchin'],
+      ['Händler', 'Händlerin'],
+      ['Heiler', 'Heilerin'],
+      ['Jäger', 'Jägerin' ],
+      ['Matrose', 'Matrosin'],
+      ['Müller', 'Müllerin'],
+      ['Priester', 'Priesterin'],
+      ['Schreiber', 'Schreiberin'],
+      ['Schmied', 'Schmiedin'],
+      ['Schneider', 'Schneiderin' ],
+      ['Schreiner', 'Schreinerin'],
+      ['Soldat', 'Soldatin'],
+      ['Söldner', 'Söldnerin' ],
+      ['Wirt', 'Wirtin'],
+      ['Weber', 'Weberin']
     ],
     currentRace: "",
     currentSkill: "",
@@ -245,4 +282,3 @@ new Vue({
     },
   }
 });
-
