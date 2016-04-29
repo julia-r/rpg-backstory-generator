@@ -3,6 +3,7 @@
 <head>
   <title>Hintergrundgeschichten-Generator</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=0.5">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.js" data-semver="1.0.17" data-require="vue.js@*"></script>
   <link rel="stylesheet" href="style.css" />
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
@@ -31,8 +32,8 @@
     <p>
       mein Name ist
       <input type="text" placeholder="(Name)" v-model="currentName">
-      <button v-on:click="randomName('f')">Vorschlag weiblich</button>
-      <button v-on:click="randomName('m')">Vorschlag männlich</button>.
+      <button v-on:click="getCurrentName('f')">Vorschlag weiblich</button>
+      <button v-on:click="getCurrentName('m')">Vorschlag männlich</button>.
     </p>
     <p>ich bin ein
       <input type="text" placeholder="(Rasse)" v-model="currentRace">
@@ -52,6 +53,18 @@
       Meine Heimat ist bekannt für
       <input type="text" placeholder="(Besonderheit)" v-model="currentFame">.
       <button v-on:click="randomFame()">Vorschlag</button>
+    </p>
+    <p>
+      Mein Vater
+      <input type="text" placeholder="(Name)" v-model="dadName">
+      <button v-on:click="randomDadName()">Vorschlag</button> ist
+      <input type="text" placeholder="(Beruf)"  v-model="dadJob">
+      <button v-on:click="randomDadJob()">Vorschlag</button> von Beruf. <br>
+      Meine Mutter
+      <input type="text" placeholder="(Name)" v-model="momName">
+      <button v-on:click="randomMomName()">Vorschlag</button> arbeitet als
+      <input type="text" placeholder="(Beruf)"  v-model="momJob">
+      <button v-on:click="randomMomJob()">Vorschlag</button>. <br>
     </p>
     <p>
       Besonders gut kann ich
@@ -100,6 +113,10 @@
     <p>
       Ich komme aus {{currentCity}} in {{currentLand}}. <br>
       Meine Heimat ist bekannt für {{currentFame}}.
+    </p>
+    <p>
+      Mein Vater {{dadName}} ist {{dadJob}} von Beruf. <br>
+      Meine Mutter {{momName}} arbeitet als {{momJob}}.
     </p>
     <p>
       Besonders gut kann ich

@@ -172,6 +172,7 @@ new Vue({
     jobs: [
       ['Alchemist', 'Alchemistin'],
       ['Bäcker', 'Bäckerin'],
+      ['Bettler', 'Bettlerin'],
       ['Bauer', 'Bäuerin'],
       ['Bote', 'Botin' ],
       ['Falkner', 'Falknerin'],
@@ -194,6 +195,10 @@ new Vue({
     ],
     currentRace: "",
     currentSkill: "",
+    dadName: "",
+    dadJob: "",
+    momName: "",
+    momJob: "",
     skillList: new Array(),
     currentDisadvantage: "",
     disadvantageList: new Array(),
@@ -252,11 +257,36 @@ new Vue({
     },
     randomName: function(gender){
       if(gender == "f"){
-        this.currentName = this.randomResult(this.namesFemale);
+        return this.randomResult(this.namesFemale);
       }
       else if(gender == "m"){
-        this.currentName = this.randomResult(this.namesMale);
+         return this.randomResult(this.namesMale);
       }
+    },
+    getCurrentName: function(gender){
+      this.currentName = this.randomName(gender);
+    },
+    randomJob: function(gender){
+      var job= this.randomResult(this.jobs);
+      console.log(job);
+      if(gender == "f"){
+        return job[1];
+      }
+      else if(gender == "m"){
+        return job[0];
+      }
+    },
+    randomDadName: function(){
+      this.dadName = this.randomName("m");
+    },
+    randomMomName: function(){
+      this.momName = this.randomName("f");
+    },
+    randomDadJob: function(){
+      this.dadJob = this.randomJob("m");
+    },
+    randomMomJob: function(){
+      this.momJob = this.randomJob("f");
     },
     randomAge: function(){
       this.currentAge = this.getRandomInt(115) + 15;
@@ -271,7 +301,11 @@ new Vue({
       this.currentFame = this.randomResult(this.fame);
     },
      randomAll: function(gender){
-      this.randomName(gender);
+      this.getCurrentName(gender);
+      this.randomDadName();
+      this.randomDadJob();
+      this.randomMomName();
+      this.randomMomJob();
       this.randomRace();
       this.randomAge();
       this.randomSkill();
