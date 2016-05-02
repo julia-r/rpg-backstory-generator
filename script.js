@@ -268,7 +268,7 @@ new Vue({
     },
     randomJob: function(gender){
       var job= this.randomResult(this.jobs);
-      console.log(job);
+      
       if(gender == "f"){
         return job[1];
       }
