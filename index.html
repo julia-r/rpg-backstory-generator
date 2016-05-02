@@ -3,6 +3,7 @@
 <head>
   <title>Hintergrundgeschichten-Generator</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=0.5">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.js" data-semver="1.0.17" data-require="vue.js@*"></script>
   <link rel="stylesheet" href="style.css" />
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
@@ -25,67 +26,160 @@
     ohne Buttons sehen und drucken oder markieren und dir rauskopieren.
   </p>
 
+  <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <symbol id="icon-pencil" viewBox="0 0 16 16">
+  <title>pencil</title>
+  <path class="path1" d="M13.5 0c1.381 0 2.5 1.119 2.5 2.5 0 0.563-0.186 1.082-0.5 1.5l-1 1-3.5-3.5 1-1c0.418-0.314 0.937-0.5 1.5-0.5zM1 11.5l-1 4.5 4.5-1 9.25-9.25-3.5-3.5-9.25 9.25zM11.181 5.681l-7 7-0.862-0.862 7-7 0.862 0.862z"></path>
+  </symbol>
+  <symbol id="icon-dice" viewBox="0 0 16 16">
+  <title>dice</title>
+  <path class="path1" d="M13.5 3h-8c-1.375 0-2.5 1.125-2.5 2.5v8c0 1.375 1.125 2.5 2.5 2.5h8c1.375 0 2.5-1.125 2.5-2.5v-8c0-1.375-1.125-2.5-2.5-2.5zM6.5 14c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5zM6.5 8c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5zM9.5 11c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5zM12.5 14c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5zM12.5 8c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5-0.672 1.5-1.5 1.5zM12.949 2c-0.233-1.138-1.245-2-2.449-2h-8c-1.375 0-2.5 1.125-2.5 2.5v8c0 1.204 0.862 2.216 2 2.449v-9.949c0-0.55 0.45-1 1-1h9.949z"></path>
+  </symbol>
+  <symbol id="icon-printer" viewBox="0 0 16 16">
+  <title>printer</title>
+  <path class="path1" d="M4 1h8v2h-8v-2z"></path>
+  <path class="path2" d="M15 4h-14c-0.55 0-1 0.45-1 1v5c0 0.55 0.45 1 1 1h3v4h8v-4h3c0.55 0 1-0.45 1-1v-5c0-0.55-0.45-1-1-1zM2 7c-0.552 0-1-0.448-1-1s0.448-1 1-1 1 0.448 1 1-0.448 1-1 1zM11 14h-6v-5h6v5z"></path>
+  </symbol>
+  <symbol id="icon-man" viewBox="0 0 16 16">
+  <title>man</title>
+  <path class="path1" d="M9 1.5c0 0.828-0.672 1.5-1.5 1.5s-1.5-0.672-1.5-1.5c0-0.828 0.672-1.5 1.5-1.5s1.5 0.672 1.5 1.5z"></path>
+  <path class="path2" d="M9 4h-3c-0.552 0-1 0.448-1 1v5h1v6h1.25v-6h0.5v6h1.25v-6h1v-5c0-0.552-0.448-1-1-1z"></path>
+  </symbol>
+  <symbol id="icon-woman" viewBox="0 0 16 16">
+  <title>woman</title>
+  <path class="path1" d="M9 1.5c0 0.828-0.672 1.5-1.5 1.5s-1.5-0.672-1.5-1.5c0-0.828 0.672-1.5 1.5-1.5s1.5 0.672 1.5 1.5z"></path>
+  <path class="path2" d="M11.234 8l0.766-0.555-2.083-3.221c-0.092-0.14-0.249-0.225-0.417-0.225h-4c-0.168 0-0.325 0.084-0.417 0.225l-2.083 3.221 0.766 0.555 1.729-2.244 0.601 1.402-2.095 3.841h1.917l0.333 5h1v-5h0.5v5h1l0.333-5h1.917l-2.095-3.842 0.601-1.402 1.729 2.244z"></path>
+  </symbol>
+  <symbol id="icon-plus" viewBox="0 0 16 16">
+  <title>plus</title>
+  <path class="path1" d="M15.5 6h-5.5v-5.5c0-0.276-0.224-0.5-0.5-0.5h-3c-0.276 0-0.5 0.224-0.5 0.5v5.5h-5.5c-0.276 0-0.5 0.224-0.5 0.5v3c0 0.276 0.224 0.5 0.5 0.5h5.5v5.5c0 0.276 0.224 0.5 0.5 0.5h3c0.276 0 0.5-0.224 0.5-0.5v-5.5h5.5c0.276 0 0.5-0.224 0.5-0.5v-3c0-0.276-0.224-0.5-0.5-0.5z"></path>
+  </symbol>
+  <symbol id="icon-minus" viewBox="0 0 16 16">
+  <title>minus</title>
+  <path class="path1" d="M0 6.5v3c0 0.276 0.224 0.5 0.5 0.5h15c0.276 0 0.5-0.224 0.5-0.5v-3c0-0.276-0.224-0.5-0.5-0.5h-15c-0.276 0-0.5 0.224-0.5 0.5z"></path>
+  </symbol>
+  <symbol id="icon-github" viewBox="0 0 16 16">
+  <title>github</title>
+  <path class="path1" d="M8 0.198c-4.418 0-8 3.582-8 8 0 3.535 2.292 6.533 5.471 7.591 0.4 0.074 0.547-0.174 0.547-0.385 0-0.191-0.008-0.821-0.011-1.489-2.226 0.484-2.695-0.944-2.695-0.944-0.364-0.925-0.888-1.171-0.888-1.171-0.726-0.497 0.055-0.486 0.055-0.486 0.803 0.056 1.226 0.824 1.226 0.824 0.714 1.223 1.872 0.869 2.328 0.665 0.072-0.517 0.279-0.87 0.508-1.070-1.777-0.202-3.645-0.888-3.645-3.954 0-0.873 0.313-1.587 0.824-2.147-0.083-0.202-0.357-1.015 0.077-2.117 0 0 0.672-0.215 2.201 0.82 0.638-0.177 1.322-0.266 2.002-0.269 0.68 0.003 1.365 0.092 2.004 0.269 1.527-1.035 2.198-0.82 2.198-0.82 0.435 1.102 0.162 1.916 0.079 2.117 0.513 0.56 0.823 1.274 0.823 2.147 0 3.073-1.872 3.749-3.653 3.947 0.287 0.248 0.543 0.735 0.543 1.481 0 1.070-0.009 1.932-0.009 2.195 0 0.213 0.144 0.462 0.55 0.384 3.177-1.059 5.466-4.057 5.466-7.59 0-4.418-3.582-8-8-8z"></path>
+  </symbol>
+  </defs>
+  </svg>
+
 
   <section class="letter edit" v-if="editMode">
     <h2>Zum Gruße,</h2>
     <p>
       mein Name ist
-      <input type="text" placeholder="(Name)" v-model="currentName">
-      <button v-on:click="randomName('f')">Vorschlag weiblich</button>
-      <button v-on:click="randomName('m')">Vorschlag männlich</button>.
+      <input type="text" placeholder="(Name)" v-model="currentName" class="short">
+      <button v-on:click="getCurrentName('f')" class="wide">
+        <svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg>
+        <svg class="icon icon-woman"><use xlink:href="#icon-woman"></use></svg>
+        <span>Vorschlag weiblich</span>
+      </button>
+      <button v-on:click="getCurrentName('m')" class="wide">
+        <svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg>
+        <svg class="icon icon-man"><use xlink:href="#icon-man"></use></svg>
+        <span>Vorschlag männlich</span>
+      </button>.
     </p>
     <p>ich bin ein
-      <input type="text" placeholder="(Rasse)" v-model="currentRace">
-      <button v-on:click="randomRace">Vorschlag</button> und
+      <input type="text" placeholder="(Rasse)" v-model="currentRace" class="short">
+      <button v-on:click="randomRace"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button> und
       <input type="number" v-model="currentAge">Jahre alt
-      <button v-on:click="randomAge()">Vorschlag</button>.
+      <button v-on:click="randomAge()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>.
     </p>
     <p>
       Du erkennst mich an
-      <input type="text" placeholder="(Merkmal)" v-model="currentSign">
-      <button v-on:click="randomSign()">Vorschlag</button>
+      <input type="text" placeholder="(Merkmal)" v-model="currentSign" class="long">
+      <button v-on:click="randomSign()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>
     </p>
     <p>
       Ich komme aus
-      <input type="text" placeholder="(Stadt)"> in
-      <input type="text" placeholder="(Land)">. <br>
+      <input type="text" placeholder="(Stadt)" class="short"> in
+      <input type="text" placeholder="(Land)" class="short">. <br>
       Meine Heimat ist bekannt für
-      <input type="text" placeholder="(Besonderheit)" v-model="currentFame">.
-      <button v-on:click="randomFame()">Vorschlag</button>
+      <input type="text" placeholder="(Besonderheit)" v-model="currentFame" class="long">.
+      <button v-on:click="randomFame()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>
+    </p>
+    <p>
+      Mein Vater
+      <input type="text" placeholder="(Name)" v-model="dadName" class="short">
+      <button v-on:click="randomDadName()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button> ist
+      <input type="text" placeholder="(Beruf)"  v-model="dadJob" class="short">
+      <button v-on:click="randomDadJob()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button> von Beruf. <br>
+      Meine Mutter
+      <input type="text" placeholder="(Name)" v-model="momName" class="short">
+      <button v-on:click="randomMomName()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button> arbeitet als
+      <input type="text" placeholder="(Beruf)"  v-model="momJob" class="short">
+      <button v-on:click="randomMomJob()"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>. <br>
     </p>
     <p>
       Besonders gut kann ich
-      <ul v-for="skill in skillList">
-        <li>{{ skill }}<button v-on:click="popSkill(skill)">x</button></li>
+      <ul>
+        <li v-for="skill in skillList">
+          {{ skill }}
+          <button v-on:click="popSkill(skill)">
+            <svg class="icon icon-minus"><use xlink:href="#icon-minus"></use></svg>
+            <span>Entfernen</span>
+          </button>
+        </li>
       </ul>
 
       <input type="text" placeholder="(Fertigkeiten)" v-model="currentSkill">
-      <button v-on:click="addSkill">+</button>.
-      <button v-on:click="randomSkill">Vorschlag</button>.
+      <button v-on:click="addSkill">
+        <svg class="icon icon-plus"><use xlink:href="#icon-plus"></use></svg>
+        <span>Hinzufügen</span>
+      </button>.
+      <button v-on:click="randomSkill"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>.
     </p>
     <p>
       Meine Schwächen sind meine
-      <ul v-for="dis in disadvantageList">
-        <li>{{ dis }} <button v-on:click="popDisadvantage(dis)">x</button></li>
+      <ul>
+        <li v-for="dis in disadvantageList">
+          {{ dis }}
+          <button v-on:click="popDisadvantage(dis)">
+            <svg class="icon icon-minus"><use xlink:href="#icon-minus"></use></svg>
+            <span>Entfernen</span>
+          </button>
+        </li>
       </ul>
       <input type="text" placeholder="(Nachteile)" v-model="currentDisadvantage">
-       <button v-on:click="addDisadvantage">+</button>.
-      <button v-on:click="randomDisadvantage">Vorschlag</button>
+       <button v-on:click="addDisadvantage">
+         <svg class="icon icon-plus"><use xlink:href="#icon-plus"></use></svg>
+         <span>Hinzufügen</span>
+       </button>.
+      <button v-on:click="randomDisadvantage"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>
     </p>
     <p>
       Ich erzähle nicht jedem, dass
-      <textarea placeholder="(Geheimnis)" v-model="currentSecret"></textarea>
-      <button v-on:click="randomSecret">Vorschlag</button>
+      <input placeholder="(Geheimnis)" v-model="currentSecret" class="long">
+      <button v-on:click="randomSecret"><svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg><span>Vorschlag</span></button>
     </p>
     <p>
       Das solltest du noch über mich wissen
-      <textarea placeholder="(Alles was dir sonst noch einfällt)" v-model="currentOther"></textarea>
+      <input placeholder="(Alles was dir sonst noch einfällt)" v-model="currentOther" class="long">
     </p>
 
-    <button v-on:click="randomAll('f')">Alles neu vorschlagen (weiblich)</button>
-    <button v-on:click="randomAll('m')">Alles neu vorschlagen (männlich)</button>
+    <button v-on:click="randomAll('f')" class="very-wide">
+      Alles neu
+      <svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg>
+      <svg class="icon icon-woman"><use xlink:href="#icon-woman"></use></svg>
+      <span> (weiblich)</span>
+    </button>
+    <button v-on:click="randomAll('m')" class="very-wide">
+      Alles neu
+      <svg class="icon icon-dice"><use xlink:href="#icon-dice"></use></svg>
+      <svg class="icon icon-man"><use xlink:href="#icon-man"></use></svg>
+      <span> (männlich)</span>
+    </button>
 
-    <button v-on:click="switchToPrintView">Druckansicht</button>
+    <button v-on:click="switchToPrintView">
+      <svg class="icon icon-printer">
+        <use xlink:href="#icon-printer"></use>
+      </svg>
+      <span>Druckansicht</span>
+    </button>
   </section>
 
   <section class="print edit letter" v-if="printMode">
@@ -99,18 +193,22 @@
     </p>
     <p>
       Ich komme aus {{currentCity}} in {{currentLand}}. <br>
-      Meine Heimat ist bekannt für {{currentFame}}.
+      <span v-if="currentFame">Meine Heimat ist bekannt für {{currentFame}}.</span>
     </p>
     <p>
+      Mein Vater {{dadName}} ist {{dadJob}} von Beruf. <br>
+      Meine Mutter {{momName}} arbeitet als {{momJob}}.
+    </p>
+    <p v-if="skillList">
       Besonders gut kann ich
-      <ul v-for="skill in skillList">
-        <li>{{ skill }}</li>
+      <ul>
+        <li v-for="skill in skillList">{{ skill }}</li>
       </ul>
     </p>
-    <p>
+    <p v-if="disadvantageList">
       Meine Schwächen sind meine
-      <ul v-for="dis in disadvantageList">
-        <li>{{ dis }} </li>
+      <ul>
+        <li  v-for="dis in disadvantageList">{{ dis }} </li>
       </ul>
     </p>
     <p v-if="currentSecret">
@@ -119,8 +217,19 @@
     <p v-if="currentOther">
       Das solltest du noch über mich wissen {{currentOther}}
     </p>
-    <button v-on:click="switchToEditView">Bearbeitungsansicht</button>
+    <button v-on:click="switchToEditView">
+      <svg class="icon icon-pencil">
+        <use xlink:href="#icon-pencil"></use>
+      </svg>
+      <span>Bearbeitungsansicht</span>
+    </button>
   </section>
+
+  <p>
+    Ein Projekt von <a href="http://gruenewuerfel.de">Grüne Würfel</a>,
+    auch zu finden auf <a href="https://github.com/julia-r/rpg-backstory-generator">GitHub</a>.
+    Icons by <a href="https://icomoon.io/app">IcoMoon</a>
+  </p>
   <script src="script.js"></script>
 </body>
 

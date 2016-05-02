@@ -91,7 +91,11 @@ new Vue({
       'handwerken',
       'schlafen',
       'töpfern',
-      'fischen'
+      'fischen',
+      'stehlen',
+      'handeln',
+      'verschiedene Sprachen sprechen',
+      'lehren'
     ],
     fame: [
       'ihre hervorragende Bratwurst',
@@ -102,7 +106,9 @@ new Vue({
       'nichts besonderes',
       'den feinsten Honig',
       'ihre drakonischen Gesetze',
-      'wunderschöne Landschaft'
+      'ihre wunderschöne Landschaft',
+      'die hübschesten Mädchen',
+      'das beste Bier weit und breit'
     ],
     disadvantages: [
       'Tollpatschigkeit',
@@ -122,7 +128,10 @@ new Vue({
       'Verfressenheit',
       'Jähzornigkeit',
       'Alberkeit',
-      'negative Weltansicht'
+      'negative Weltansicht',
+      'Neugier',
+      'Angstlichkeit',
+      'schwache Blase'
     ],
     secrets: [
       'ich ein Muttermal am Hintern habe',
@@ -154,9 +163,42 @@ new Vue({
       'der Spielkarte an meinem Hut',
       'meinem Musikinstrument',
       'meinem prächtigem Bart',
+      'meinem Herold der mir vorraus eilt',
+      'meiner prunkvollen Kleidung',
+      'meiner abgewetzten Kleidung',
+      'meiner wunderschönen Stimme',
+      'meiner einzigartigen Waffe'
+    ],
+    jobs: [
+      ['Alchemist', 'Alchemistin'],
+      ['Bäcker', 'Bäckerin'],
+      ['Bettler', 'Bettlerin'],
+      ['Bauer', 'Bäuerin'],
+      ['Bote', 'Botin' ],
+      ['Falkner', 'Falknerin'],
+      ['Gerber', 'Gerberin'],
+      ['Koch', 'Köchin'],
+      ['Händler', 'Händlerin'],
+      ['Heiler', 'Heilerin'],
+      ['Jäger', 'Jägerin' ],
+      ['Matrose', 'Matrosin'],
+      ['Müller', 'Müllerin'],
+      ['Priester', 'Priesterin'],
+      ['Schreiber', 'Schreiberin'],
+      ['Schmied', 'Schmiedin'],
+      ['Schneider', 'Schneiderin' ],
+      ['Schreiner', 'Schreinerin'],
+      ['Soldat', 'Soldatin'],
+      ['Söldner', 'Söldnerin' ],
+      ['Wirt', 'Wirtin'],
+      ['Weber', 'Weberin']
     ],
     currentRace: "",
     currentSkill: "",
+    dadName: "",
+    dadJob: "",
+    momName: "",
+    momJob: "",
     skillList: new Array(),
     currentDisadvantage: "",
     disadvantageList: new Array(),
@@ -215,11 +257,36 @@ new Vue({
     },
     randomName: function(gender){
       if(gender == "f"){
-        this.currentName = this.randomResult(this.namesFemale);
+        return this.randomResult(this.namesFemale);
       }
       else if(gender == "m"){
-        this.currentName = this.randomResult(this.namesMale);
+         return this.randomResult(this.namesMale);
       }
+    },
+    getCurrentName: function(gender){
+      this.currentName = this.randomName(gender);
+    },
+    randomJob: function(gender){
+      var job= this.randomResult(this.jobs);
+      
+      if(gender == "f"){
+        return job[1];
+      }
+      else if(gender == "m"){
+        return job[0];
+      }
+    },
+    randomDadName: function(){
+      this.dadName = this.randomName("m");
+    },
+    randomMomName: function(){
+      this.momName = this.randomName("f");
+    },
+    randomDadJob: function(){
+      this.dadJob = this.randomJob("m");
+    },
+    randomMomJob: function(){
+      this.momJob = this.randomJob("f");
     },
     randomAge: function(){
       this.currentAge = this.getRandomInt(115) + 15;
@@ -234,7 +301,11 @@ new Vue({
       this.currentFame = this.randomResult(this.fame);
     },
      randomAll: function(gender){
-      this.randomName(gender);
+      this.getCurrentName(gender);
+      this.randomDadName();
+      this.randomDadJob();
+      this.randomMomName();
+      this.randomMomJob();
       this.randomRace();
       this.randomAge();
       this.randomSkill();
@@ -245,4 +316,3 @@ new Vue({
     },
   }
 });
-

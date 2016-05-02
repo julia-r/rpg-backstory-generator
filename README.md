@@ -3,3 +3,5 @@
 A generator that helps you create background stories for RPG Chars (currently in German only)
 
 (This is me playing with vue.js)
+
+[Demo](http://gruenewuerfel.de/tools/)
