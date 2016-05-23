@@ -127,7 +127,7 @@ new Vue({
       'Müdigkeit',
       'Verfressenheit',
       'Jähzornigkeit',
-      'Alberkeit',
+      'Albernheit',
       'negative Weltansicht',
       'Neugier',
       'Angstlichkeit',
@@ -268,7 +268,7 @@ new Vue({
     },
     randomJob: function(gender){
       var job= this.randomResult(this.jobs);
-      
+
       if(gender == "f"){
         return job[1];
       }
