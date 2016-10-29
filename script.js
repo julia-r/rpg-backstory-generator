@@ -1,198 +1,16 @@
-new Vue({
+var vm = new Vue({
   el: '#app',
   data: {
-    namesFemale: [
-      'Anna',
-      'Berta',
-      'Claudia',
-      'Dörte',
-      'Elfriede',
-      'Franziska',
-      'Gudrun',
-      'Gundula',
-      'Gisela',
-      'Hildegard',
-      'Hanna',
-      'Ina',
-      'Julia',
-      'Judith',
-      'Klothilde',
-      'Krimmhild',
-      'Laura',
-      'Lieselotte',
-      'Mona',
-      'Nina',
-      'Olga',
-      'Petra',
-      'Rosa',
-      'Rita',
-      'Ruby',
-      'Sieglinde',
-      'Sara',
-      'Tamara',
-      'Wilma'
-    ],
-    namesMale: [
-      'Alrik',
-      'Björn',
-      'Claus',
-      'Dirk',
-      'Erwin',
-      'Fritz',
-      'Günter',
-      'Gustav',
-      'Henning',
-      'Holger',
-      'Ijob',
-      'Jens',
-      'Jochen',
-      'Karl',
-      'Lars',
-      'Michel',
-      'Norbert',
-      'Otto',
-      'Peter',
-      'Rolf',
-      'Rudolf',
-      'Rudy',
-      'Siegfried',
-      'Samuel',
-      'Tore',
-      'Wilfried'
-    ],
-    races: [
-      'Mensch',
-      'Elf',
-      'Zwerg',
-      'Halbelf',
-      'Halbork',
-      'Halbling',
-      'Gnom',
-      'Ork',
-      'Oger'
-    ],
-    skills: [
-      'kochen',
-      'schreiben',
-      'Geschichten erzählen',
-      'kämpfen',
-      'jagen',
-      'heilen',
-      'schleichen',
-      'singen',
-      'musizieren',
-      'nähen',
-      'tanzen',
-      'Tränke brauen',
-      'zaubern',
-      'zeichnen',
-      'mit Tieren umgehen',
-      'klettern',
-      'handwerken',
-      'schlafen',
-      'töpfern',
-      'fischen',
-      'stehlen',
-      'handeln',
-      'verschiedene Sprachen sprechen',
-      'lehren'
-    ],
-    fame: [
-      'ihre hervorragende Bratwurst',
-      'marodierende Orkhorden',
-      'finstere Wälder',
-      'ihre Bürokratie',
-      'den härtesten Rum',
-      'nichts besonderes',
-      'den feinsten Honig',
-      'ihre drakonischen Gesetze',
-      'ihre wunderschöne Landschaft',
-      'die hübschesten Mädchen',
-      'das beste Bier weit und breit'
-    ],
-    disadvantages: [
-      'Tollpatschigkeit',
-      'Angst vor Spinnen',
-      'schwache Konstitution',
-      'Dummheit',
-      'Spielsucht',
-      'Schulden',
-      'Schüchternheit',
-      'Kleptomanie',
-      'Rachsucht',
-      'Ungedult',
-      'Blindheit',
-      'Stottern',
-      'Lispeln',
-      'Müdigkeit',
-      'Verfressenheit',
-      'Jähzornigkeit',
-      'Albernheit',
-      'negative Weltansicht',
-      'Neugier',
-      'Angstlichkeit',
-      'schwache Blase'
-    ],
-    secrets: [
-      'ich ein Muttermal am Hintern habe',
-      'ich nicht an Götter glaube',
-      'ich meine Seele verpfändet habe',
-      'ich verheiratet bin',
-      'ich von zu Hause weggelaufen bin',
-      'meine Würfel gezinkt sind',
-      'ich nicht lesen und schreiben kann',
-      'ich an einem Freitag dem 13. geboren wurde',
-      'ich schnarche',
-      'ich furchbar schnell betrunken bin',
-      'ich eine Perücke trage',
-      'ich desertiert bin',
-      'ich von Adel bin',
-      'ich Gedichte mag',
-      'ich von einer Hexe verflucht wurde',
-      'ich ein uneheliches Kind habe'
-    ],
-    signs: [
-      'meinem seltsamen Hut',
-      'meinem Glaubenssymbol',
-      'einer Narbe im Gesicht',
-      'meiner besonderen Frisur',
-      'meiner großen Nase',
-      'meinem Akzent',
-      'meiner Tätowierung',
-      'der Feder an meinem Hut',
-      'der Spielkarte an meinem Hut',
-      'meinem Musikinstrument',
-      'meinem prächtigem Bart',
-      'meinem Herold der mir vorraus eilt',
-      'meiner prunkvollen Kleidung',
-      'meiner abgewetzten Kleidung',
-      'meiner wunderschönen Stimme',
-      'meiner einzigartigen Waffe'
-    ],
-    jobs: [
-      ['Alchemist', 'Alchemistin'],
-      ['Bäcker', 'Bäckerin'],
-      ['Bettler', 'Bettlerin'],
-      ['Bauer', 'Bäuerin'],
-      ['Bote', 'Botin' ],
-      ['Falkner', 'Falknerin'],
-      ['Gerber', 'Gerberin'],
-      ['Koch', 'Köchin'],
-      ['Händler', 'Händlerin'],
-      ['Heiler', 'Heilerin'],
-      ['Jäger', 'Jägerin' ],
-      ['Matrose', 'Matrosin'],
-      ['Müller', 'Müllerin'],
-      ['Priester', 'Priesterin'],
-      ['Schreiber', 'Schreiberin'],
-      ['Schmied', 'Schmiedin'],
-      ['Schneider', 'Schneiderin' ],
-      ['Schreiner', 'Schreinerin'],
-      ['Soldat', 'Soldatin'],
-      ['Söldner', 'Söldnerin' ],
-      ['Wirt', 'Wirtin'],
-      ['Weber', 'Weberin']
-    ],
+    namesFemale:[],
+    namesMale:[],
+    races:[],
+    skills:[],
+    fame:[],
+    disadvantages:[],
+    secrets:[],
+    signs:[],
+    jobsFemale:[],
+    jobsMale:[],
     currentRace: "",
     currentSkill: "",
     dadName: "",
@@ -212,7 +30,7 @@ new Vue({
     currentSign: "",
     currentOther: "",
     editMode: true,
-    printMode: false,
+    printMode: false
   },
   methods: {
     switchToPrintView: function() {
@@ -267,13 +85,11 @@ new Vue({
       this.currentName = this.randomName(gender);
     },
     randomJob: function(gender){
-      var job= this.randomResult(this.jobs);
-
       if(gender == "f"){
-        return job[1];
+        return this.randomResult(this.jobsFemale);
       }
       else if(gender == "m"){
-        return job[0];
+        return this.randomResult(this.jobsMale);
       }
     },
     randomDadName: function(){
@@ -314,5 +130,34 @@ new Vue({
       this.randomSign();
       this.randomFame();
     },
+    readTextFile: function(file){
+
+        var result;
+        var rawFile = new XMLHttpRequest();
+        rawFile.onreadystatechange = function (){
+            if(rawFile.readyState === 4 && rawFile.status == 200){
+                    result = rawFile.responseText.trim().split("\n");
+            }
+        }
+        rawFile.open("GET", file, false);
+        rawFile.overrideMimeType('text/plain');
+        rawFile.send(null);
+
+        return result;
+    },
+    init: function(){
+        this.namesFemale = this.readTextFile("data/namesFemale.txt");
+        this.namesMale = this.readTextFile("data/namesMale.txt");
+        this.races = this.readTextFile("data/races.txt");
+        this.skills = this.readTextFile("data/skills.txt");
+        this.fame = this.readTextFile("data/fame.txt");
+        this.disadvantages = this.readTextFile("data/disadvantages.txt");
+        this.secrets = this.readTextFile("data/secrets.txt");
+        this.signs = this.readTextFile("data/signs.txt");
+        this.jobsFemale = this.readTextFile("data/jobsFemale.txt");
+        this.jobsMale = this.readTextFile("data/jobsMale.txt");
+    }
   }
 });
+
+vm.init();

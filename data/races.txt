@@ -1,0 +1,9 @@
+Mensch
+Elf
+Zwerg
+Halbelf
+Halbork
+Halbling
+Gnom
+Ork
+Oger
