@@ -1,5 +1,6 @@
 Alchemistin
 Bäckerin
+Bardin
 Bettlerin
 Bäuerin
 Botin
@@ -7,10 +8,13 @@ Falknerin
 Gerberin
 Köchin
 Händlerin
+Hebamme
 Heilerin
+Hexe
 Jägerin
 Matrosin
 Müllerin
+Piratin
 Priesterin
 Schreiberin
 Schmiedin

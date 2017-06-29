@@ -1,5 +1,6 @@
 Alchemist
 Bäcker
+Barde
 Bettler
 Bauer
 Bote
@@ -11,6 +12,7 @@ Heiler
 Jäger
 Matrose
 Müller
+Pirat
 Priester
 Schreiber
 Schmied
@@ -20,3 +22,4 @@ Soldat
 Söldner
 Wirt
 Weber
+Zauberer
