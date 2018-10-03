@@ -1,4 +1,9 @@
 Alrik
+Alfrid
+Andreas
+Ansel
+Axel
+Bernhardt
 Björn
 Claus
 Dirk
@@ -11,9 +16,14 @@ Holger
 Ijob
 Jens
 Jochen
+Jörn
 Karl
+Kurt
 Lars
+Lochner
+Mattäus
 Michel
+Moritz
 Norbert
 Otto
 Peter
@@ -24,3 +34,5 @@ Siegfried
 Samuel
 Tore
 Wilfried
+Wilhelm
+Wolfgang
