@@ -7,3 +7,8 @@ Halbling
 Gnom
 Ork
 Oger
+Yaksha
+Naga
+Deva
+God
+Human
