@@ -14,6 +14,7 @@ Hexe
 Jägerin
 Matrosin
 Müllerin
+Nonne
 Piratin
 Priesterin
 Schreiberin
@@ -24,3 +25,4 @@ Soldatin
 Söldnerin
 Wirtin
 Weberin
+Winzerin
