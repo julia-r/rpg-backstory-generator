@@ -4,6 +4,7 @@ Barde
 Bettler
 Bauer
 Bote
+Entwickler
 Falkner
 Gerber
 Koch
