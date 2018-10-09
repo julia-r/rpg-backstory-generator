@@ -11,6 +11,7 @@ Händler
 Heiler
 Jäger
 Matrose
+Mönch
 Müller
 Pirat
 Priester
@@ -23,3 +24,4 @@ Söldner
 Wirt
 Weber
 Zauberer
+Winzer
